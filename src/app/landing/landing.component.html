@@ -1,0 +1,8 @@
+<div class="container p-5">
+    <h1 class="display-4">Landing Component</h1>
+    <p class="lead">Calling the accommodations service below <a href="http://localhost:3000/accommodations/api/v1/index/greeting">here</a></p>
+    <ng-container *ngIf="greeting$ | async as messages">
+        <p class="my-0 text-secondary font-weight-light" *ngFor="let message of messages">... {{message.greeting}}</p>
+    </ng-container>
+</div>
+
