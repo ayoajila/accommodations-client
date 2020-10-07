@@ -1,5 +1,7 @@
 {
-    "GREETING" : {
-        "CONTENT": "ngx-translate is working!"
+    "TEST" : {
+        "TITLE": "Test Area for ngx-translate",
+        "BUTTON": "FRANCAIS",
+        "MESSAGE": "It works!"
     }
 }

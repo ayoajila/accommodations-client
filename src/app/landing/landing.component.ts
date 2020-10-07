@@ -25,4 +25,12 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  swapLanguage(): void {
+    if (this._translate.currentLang === 'en') {
+      this._translate.use('fr');
+    } else {
+      this._translate.use('en');
+    }
+  }
+
 }

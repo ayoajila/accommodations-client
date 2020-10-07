@@ -4,8 +4,16 @@
     <ng-container *ngIf="greeting$ | async as messages">
         <p class="my-0 text-secondary font-weight-light" *ngFor="let message of messages">... {{message.greeting}}</p>
     </ng-container>
-    <h1>
-        {{ 'GREETING.CONTENT' | translate }}
-    </h1>
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ "TEST.TITLE" | translate }}</h2>
+        </div>
+        <div class="card-body">
+            <p>{{ "TEST.MESSAGE" | translate }}</p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" (click)="swapLanguage()">{{ "TEST.BUTTON" | translate }}</button>
+        </div>
+    </div>
 </div>
 
