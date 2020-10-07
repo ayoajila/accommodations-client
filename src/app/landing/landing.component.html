@@ -4,5 +4,8 @@
     <ng-container *ngIf="greeting$ | async as messages">
         <p class="my-0 text-secondary font-weight-light" *ngFor="let message of messages">... {{message.greeting}}</p>
     </ng-container>
+    <h1>
+        {{ 'GREETING.CONTENT' | translate }}
+    </h1>
 </div>
 
