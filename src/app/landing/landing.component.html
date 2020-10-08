@@ -4,6 +4,8 @@
     <ng-container *ngIf="greeting$ | async as messages">
         <p class="my-0 text-secondary font-weight-light" *ngFor="let message of messages">... {{message.greeting}}</p>
     </ng-container>
+
+    <!-- Test Area for Ngx-Translate -->
     <div class="card">
         <div class="card-header">
             <h2>{{ "TEST.TITLE" | translate }}</h2>
@@ -15,5 +17,6 @@
             <button class="btn btn-primary" (click)="swapLanguage()">{{ "TEST.BUTTON" | translate }}</button>
         </div>
     </div>
+    
 </div>
 

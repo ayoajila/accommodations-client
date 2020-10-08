@@ -25,6 +25,9 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Triggered on button click, swaps language between english and french.
+   */
   swapLanguage(): void {
     if (this._translate.currentLang === 'en') {
       this._translate.use('fr');
