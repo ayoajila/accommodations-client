@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Add our overrides for the bootstrap variables here
+// Example:
+// $primary: #fff540;
+
+
+// End overloading section
+
+// Imports for style files
+@import './node_modules/bootstrap/scss/bootstrap.scss';
