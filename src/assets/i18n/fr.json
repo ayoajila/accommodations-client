@@ -1,7 +1,24 @@
 {
     "TEST" : {
-        "TITLE": "Zone de test pour ngx-translate",
+        "TITLE": "fr-Test Area for ngx-translate",
         "BUTTON": "English",
-        "MESSAGE": "Ca marche!"
+        "MESSAGE": "fr-It works!"
+    },
+    "NewRequest" : {
+        "ProjectTitle" : "fr-Accommodations",
+        "PageTitle" : "fr-Request Details",
+        "RequestTypeTitle" : "fr-Select a request type below",
+        "RequestTypeDesc" : "fr-You can make a request for a new hire, a request for an existing employee to move to a new workspace, and a request for an existing employee to vacate a workspace without requiring a new space.",
+        "RequestTypeLabel" : "fr-Request Type",
+        "EmployeeTitle" : "fr-Select an employee",
+        "EmployeeDesc" : "fr-Select the employee who this request is for below.",
+        "EmployeeLabel" : "fr-Find employee",
+        "EmployeeSelected" : "fr-Selected employee",
+        "EmployeeType" : "fr-Employee type:",
+        "IsCriticalLabel" : "fr-Critical hire status:",
+        "IsCriticalTrueLabel" : "fr-Yes, this employee is a critical hire",
+        "IsCriticalFalseLabel" : "fr-No",
+        "DateOfMoveLabel" : "fr-Date of move",
+        "SubmitBtn" : "fr-Find a workspace"
     }
 }
