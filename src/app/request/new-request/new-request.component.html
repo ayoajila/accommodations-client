@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container mt-5">
     <!-- Opener -->
     <div>
         <p class="text-muted mb-0">Accommodations</p>
-        <h1 class="mt-0">Request Details</h1>
+        <h1 class="my-0">Request Details</h1>
     </div>
     <!-- Form -->
-    <div class="mt-5">
+    <div class="mt-4">
         <form [formGroup]="requestForm" (ngSubmit)="requestFormSubmit()">
             <div class="form-group">
                 <h3>Select a request type below</h3>
@@ -22,8 +22,8 @@
             <div class="form-group">
                 <!-- Employee Select -->
                 <!-- Will change when adding in Microsoft Graph API -->
-                <h3>Select an Employee</h3>
-                <p>Select the employee who this request is for below</p>
+                <h3>Select an employee</h3>
+                <p>Select the employee who this request is for below.</p>
                 <label for="employee">Find employee</label>
                 <input type="text" name="employee" id="employee" formControlName="employee" placeholder="Enter here" class="form-control">
             </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <!-- Employee Type -->
-                <label for="employeeType">Employee type</label>
+                <label for="employeeType">Employee type:</label>
                 <select name="employeeType" id="employeeType" formControlName="employeeType" class="form-control">
                     <option value="" class="text-muted">Choose a type</option>
                     <option *ngFor="let type of employeeTypes">{{ type }}</option>
