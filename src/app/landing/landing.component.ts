@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GreetingService } from '../shared/services/greeting.service';
+import { TranslateService } from '@ngx-translate/core';
 import { catchError } from 'rxjs/operators';
 import { EMPTY } from 'rxjs';
 
@@ -16,9 +17,23 @@ export class LandingComponent implements OnInit {
     return EMPTY;
   }))
 
-  constructor(private greetingService: GreetingService) { }
+  constructor(private greetingService: GreetingService, private _translate: TranslateService) { 
+    this._translate.setDefaultLang('en');
+    this._translate.use('en');
+  }
 
   ngOnInit(): void {
+  }
+
+  /**
+   * Triggered on button click, swaps language between english and french.
+   */
+  swapLanguage(): void {
+    if (this._translate.currentLang === 'en') {
+      this._translate.use('fr');
+    } else {
+      this._translate.use('en');
+    }
   }
 
 }

@@ -1,0 +1,7 @@
+{
+    "TEST" : {
+        "TITLE": "Test Area for ngx-translate",
+        "BUTTON": "Francais",
+        "MESSAGE": "It works!"
+    }
+}
