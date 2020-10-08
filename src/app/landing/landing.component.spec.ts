@@ -22,9 +22,6 @@ describe('LandingComponent', () => {
           }
         })
       ],
-      providers: [
-        TranslateService
-      ]
     })
     .compileComponents();
   }));
