@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
+// TODO: Set up with translate
+// TODO: Set default date to current
+// TODO: Validators for fields
+
 @Component({
   selector: 'app-new-request',
   templateUrl: './new-request.component.html',
