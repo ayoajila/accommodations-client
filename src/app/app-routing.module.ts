@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
+import { NewRequestComponent } from './request/new-request/new-request.component';
 
 const mainRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const mainRoutes: Routes = [
   {
     path: 'landing',
     component: LandingComponent
+  },
+  {
+    path: 'newRequest',
+    component: NewRequestComponent
   }
 ]
 
