@@ -11,11 +11,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NewRequestComponent implements OnInit {
   requestForm: FormGroup;
-  constructor(private _fb: FormBuilder, private _translate: TranslateService) { 
+  constructor(private fb: FormBuilder, private translate: TranslateService) {
   }
 
   ngOnInit(): void {
-    this.requestForm = this._fb.group({
+    this.translate.use(this.translate.getBrowserLang());
+    this.requestForm = this.fb.group({
       requestType: ['', Validators.required],
       // Should be a valid employee
       employee: ['', Validators.required],
@@ -23,8 +24,6 @@ export class NewRequestComponent implements OnInit {
       isCritical: ['false'],
       dateOfMove: ['', Validators.required],
     });
-    this._translate.use('en');
-    // console.log(this._translate.currentLang);
   }
 
   /**
