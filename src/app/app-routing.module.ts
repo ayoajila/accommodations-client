@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { NewRequestComponent } from './request/new-request/new-request.component';
+import { SelectWorkspaceComponent } from './request/select-workspace/select-workspace.component';
 
 const mainRoutes: Routes = [
   {
@@ -16,8 +17,12 @@ const mainRoutes: Routes = [
   {
     path: 'newRequest',
     component: NewRequestComponent
+  },
+  {
+    path: 'selectWorkspace',
+    component: SelectWorkspaceComponent
   }
-]
+];
 
 const langRoutes: Routes = [
   {
