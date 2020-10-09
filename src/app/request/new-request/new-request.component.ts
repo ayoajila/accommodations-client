@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
-// TODO: Set up with translate
 // TODO: Set default date to current
 // TODO: Validators for fields
 

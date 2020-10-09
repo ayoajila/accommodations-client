@@ -15,6 +15,7 @@
         "RequestTypeOpt2" : "Move from a current workspace",
         "RequestTypeOpt3" : "Vacate a workspace",
         "EmployeeTitle" : "Select an employee",
+        "EmployeeHint" : "Enter here",
         "EmployeeDesc" : "Select the employee who this request is for below.",
         "EmployeeLabel" : "Find employee",
         "EmployeeSelected" : "Selected employee:",

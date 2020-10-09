@@ -15,6 +15,7 @@
         "RequestTypeOpt2" : "fr-Move from a current workspace",
         "RequestTypeOpt3" : "fr-Vacate a workspace",
         "EmployeeTitle" : "fr-Select an employee",
+        "EmployeeHint" : "fr-Enter here",
         "EmployeeDesc" : "fr-Select the employee who this request is for below.",
         "EmployeeLabel" : "fr-Find employee",
         "EmployeeSelected" : "fr-Selected employee:",
