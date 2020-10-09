@@ -1,4 +1,8 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
 
 import { NewRequestComponent } from './new-request.component';
 
@@ -8,7 +12,18 @@ describe('NewRequestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewRequestComponent ]
+      declarations: [ NewRequestComponent ],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: httpLoaderFactory,
+            deps: [HttpClient]
+          }
+        })
+      ]
     })
     .compileComponents();
   }));
