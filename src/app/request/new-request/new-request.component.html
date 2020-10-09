@@ -12,12 +12,14 @@
                 <p>{{ "NewRequest.RequestTypeDesc" | translate }}</p>
                 <!-- Request Type -->
                 <label for="requestType">{{ "NewRequest.RequestTypeLabel" | translate }}</label>
-                <select name="requestType" id="requestType" class="form-control" formControlName="requestType">
+                <select name="requestType" id="requestType" class="form-control" formControlName="requestType"
+                [ngClass]="{'is-valid': isFieldValid('requestType'), 'is-invalid': isFieldInValid('requestType')}">
                     <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
                     <option>{{ "NewRequest.RequestTypeOpt1" | translate }}</option>
                     <option>{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
                     <option>{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                 </select>
+                <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback">Required.</span>
             </div>
             <div class="form-group">
                 <!-- Employee Select -->
@@ -25,7 +27,9 @@
                 <h3>{{ "NewRequest.EmployeeTitle" | translate }}</h3>
                 <p>{{ "NewRequest.EmployeeDesc" | translate }}</p>
                 <label for="employee">{{ "NewRequest.EmployeeTitle" | translate }}</label>
-                <input type="text" name="employee" id="employee" formControlName="employee" placeholder="{{ 'NewRequest.EmployeeHint' | translate }}" class="form-control">
+                <input type="text" name="employee" id="employee" formControlName="employee" placeholder="{{ 'NewRequest.EmployeeHint' | translate }}" class="form-control"
+                [ngClass]="{'is-valid': isFieldValid('employee'), 'is-invalid': isFieldInValid('employee')}">
+                <span *ngIf="isFieldInValid('employee')" class="invalid-feedback">Required.</span>
             </div>
             <div class="form-group">
                 <p>{{ "NewRequest.EmployeeSelected" | translate }}</p>
@@ -39,7 +43,8 @@
             <div class="form-group">
                 <!-- Employee Type -->
                 <label for="employeeType">{{ "NewRequest.EmployeeType" | translate }}</label>
-                <select name="employeeType" id="employeeType" formControlName="employeeType" class="form-control">
+                <select name="employeeType" id="employeeType" formControlName="employeeType" class="form-control"
+                [ngClass]="{'is-valid': isFieldValid('employeeType'), 'is-invalid': isFieldInValid('employeeType')}">
                     <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
                     <option>{{ "NewRequest.EmployeeTypeOpt1" | translate }}</option>
                     <option>{{ "NewRequest.EmployeeTypeOpt2" | translate }}</option>
@@ -48,10 +53,11 @@
                     <option>{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
                     <option>{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                 </select>
+                <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback">Required.</span>
             </div>
             <div class="form-group">
                 <!-- Critical Hire Status -->
-                <label>{{ "NewRequest.isCriticalLabel" | translate }}</label>
+                <label>{{ "NewRequest.IsCriticalLabel" | translate }}</label>
                 <div class="form-check">
                     <input type="radio" name="isCritical" id="isCriticalTrue" class="form-check-input" formControlName="isCritical" value="true">
                     <label for="isCriticalTrue" class="form-check-label">{{ "NewRequest.IsCriticalTrueLabel" | translate }}</label>
@@ -64,7 +70,9 @@
             <div class="form-group">
                 <!-- Date of move -->
                 <label for="dateOfMove">{{ "NewRequest.DateOfMoveLabel" | translate }}</label>
-                <input type="date" class="form-control" formControlName="dateOfMove">
+                <input type="date" class="form-control" formControlName="dateOfMove"
+                [ngClass]="{'is-valid': isFieldValid('dateOfMove'), 'is-invalid': isFieldInValid('dateOfMove')}">
+                <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback">Required.</span>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">{{ "NewRequest.SubmitBtn" | translate }}</button>

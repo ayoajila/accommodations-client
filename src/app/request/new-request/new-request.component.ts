@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
 // TODO: Set default date to current
-// TODO: Validators for fields
 
 @Component({
   selector: 'app-new-request',
@@ -17,17 +16,20 @@ export class NewRequestComponent implements OnInit {
 
   ngOnInit(): void {
     this.requestForm = this._fb.group({
-      requestType: [''],
-      employee: [''],
-      employeeType: [''],
+      requestType: ['', Validators.required],
+      // Should be a valid employee
+      employee: ['', Validators.required],
+      employeeType: ['', Validators.required],
       isCritical: ['false'],
-      dateOfMove: [''],
+      dateOfMove: ['', Validators.required],
     });
     this._translate.use('en');
-    console.log(this._translate.currentLang);
+    // console.log(this._translate.currentLang);
   }
 
-  // handler for form submittal
+  /**
+   * Method to handle form submittal
+   */
   requestFormSubmit(): void {
     console.log(this.requestForm.value);
     this.requestForm.reset({
@@ -37,6 +39,21 @@ export class NewRequestComponent implements OnInit {
       isCritical: 'false',
       dateOfMove: ''
     });
+  }
+
+  /**
+   * Helper method to determine if a field is valid
+   * @param fieldName the name of the field to check
+   */
+  isFieldValid(fieldName: string): boolean {
+    return (this.requestForm.get(fieldName).touched || this.requestForm.get(fieldName).dirty) && this.requestForm.get(fieldName).valid;
+  }
+  /**
+   * Helper method to determine if a field is invalid
+   * @param fieldName the name of the field to check
+   */
+  isFieldInValid(fieldName: string): boolean {
+    return (this.requestForm.get(fieldName).touched || this.requestForm.get(fieldName).dirty) && !this.requestForm.get(fieldName).valid;
   }
 
 }
