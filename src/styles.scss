@@ -8,9 +8,25 @@
 
 // Start Global Class Section //
 // Alternate containers linked with screen size
-@media (min-width: 768px) {
+@media (max-width: 576px) {
     .container-small {
         width: 300px;
+    }
+    .container-large {
+        width: 500px;
+    } 
+}
+@media (min-width: 576px) {
+    .container-small {
+        width: 400px;
+    }
+    .container-large {
+        width: 560px;
+    } 
+}
+@media (min-width: 768px) {
+    .container-small {
+        width: 600px;
     }
     .container-large {
         width: 970px;
@@ -18,7 +34,7 @@
 } 
 @media (min-width: 992px) {
     .container-small {
-        width: 500px;
+        width: 600px;
     }
     .container-large {
         width: 1170px;
