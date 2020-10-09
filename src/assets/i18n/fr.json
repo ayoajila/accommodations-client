@@ -31,5 +31,15 @@
         "IsCriticalFalseLabel" : "fr-No",
         "DateOfMoveLabel" : "fr-Date of move",
         "SubmitBtn" : "fr-Find a workspace"
+    },
+    "SelectWorkspace" : {
+        "PageTitle" : "fr-Select Workspace",
+        "FilterTitle" : "fr-Filter your search here",
+        "WorkspaceTypeLabel" : "fr-Workspace type:",
+        "WorkspaceFloorLabel" : "fr-Select a floor:",
+        "FilterBtn" : "fr-Filter search",
+        "CancelRequest" : "fr-Cancel Request",
+        "FilterResultsLabel" : "fr-Available workspaces",
+        "SelectWorkspaceBtn" : "fr-Reserve this space"
     }
 }

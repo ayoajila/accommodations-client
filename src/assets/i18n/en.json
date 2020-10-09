@@ -31,6 +31,16 @@
         "IsCriticalFalseLabel" : "No",
         "DateOfMoveLabel" : "Date of move",
         "SubmitBtn" : "Find a workspace"
+    },
+    "SelectWorkspace" : {
+        "PageTitle" : "Select Workspace",
+        "FilterTitle" : "Filter your search here",
+        "WorkspaceTypeLabel" : "Workspace type:",
+        "WorkspaceFloorLabel" : "Select a floor:",
+        "FilterBtn" : "Filter search",
+        "CancelRequest" : "Cancel Request",
+        "FilterResultsLabel" : "Available workspaces",
+        "SelectWorkspaceBtn" : "Reserve this space"
     }
     
 }
