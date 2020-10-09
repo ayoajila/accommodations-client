@@ -14,8 +14,8 @@ export class SelectWorkspaceComponent implements OnInit {
   ngOnInit(): void {
     this.translate.use(this.translate.getBrowserLang());
     this.filterForm = this.fb.group({
-      workspaceType: (''),
-      workspaceFloor: ('')
+      workspaceType: ['all'],
+      workspaceFloor: ['all']
     });
   }
 
