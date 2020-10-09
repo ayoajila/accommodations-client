@@ -1,4 +1,7 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { httpLoaderFactory } from '../shared/factories/httpLoaderFactory';
 
 import { LandingComponent } from './landing.component';
 
@@ -8,7 +11,17 @@ describe('LandingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LandingComponent ]
+      declarations: [ LandingComponent ],
+      imports: [ 
+        HttpClientModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: httpLoaderFactory,
+            deps: [HttpClient]
+          }
+        })
+      ],
     })
     .compileComponents();
   }));
