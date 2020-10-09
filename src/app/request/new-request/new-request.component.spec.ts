@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
+import { AppRoutingModule } from '../../app-routing.module';
 
 import { NewRequestComponent } from './new-request.component';
 
@@ -16,6 +17,7 @@ describe('NewRequestComponent', () => {
       imports: [
         ReactiveFormsModule,
         HttpClientModule,
+        AppRoutingModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
