@@ -1,34 +1,34 @@
 <div class="container mt-5">
     <!-- Opener -->
     <div>
-        <p class="text-muted mb-0">Accommodations</p>
-        <h1 class="my-0">Request Details</h1>
+        <p class="text-muted mb-0">{{ "NewRequest.ProjectTitle" | translate }}</p>
+        <h1 class="my-0">{{ "NewRequest.PageTitle" | translate }}</h1>
     </div>
     <!-- Form -->
     <div class="mt-4">
         <form [formGroup]="requestForm" (ngSubmit)="requestFormSubmit()">
             <div class="form-group">
-                <h3>Select a request type below</h3>
-                <p>You can make a request for a new hire, a request for an existing employee to move to a new workspace,
-                    and a request for an existing employee to vacate a workspace without requiring a new space.
-                </p>
+                <h3>{{ "NewRequest.RequestTypeTitle" | translate }}</h3>
+                <p>{{ "NewRequest.RequestTypeDesc" | translate }}</p>
                 <!-- Request Type -->
-                <label for="requestType">Request Type</label>
+                <label for="requestType">{{ "NewRequest.RequestTypeLabel" | translate }}</label>
                 <select name="requestType" id="requestType" class="form-control" formControlName="requestType">
-                    <option value="" class="text-muted">Choose a type</option>
-                    <option *ngFor="let type of requestTypes">{{ type }}</option>
+                    <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
+                    <option>{{ "NewRequest.RequestTypeOpt1" | translate }}</option>
+                    <option>{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
+                    <option>{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <!-- Employee Select -->
                 <!-- Will change when adding in Microsoft Graph API -->
-                <h3>Select an employee</h3>
-                <p>Select the employee who this request is for below.</p>
-                <label for="employee">Find employee</label>
+                <h3>{{ "NewRequest.EmployeeTitle" | translate }}</h3>
+                <p>{{ "NewRequest.EmployeeDesc" | translate }}</p>
+                <label for="employee">{{ "NewRequest.EmployeeTitle" | translate }}</label>
                 <input type="text" name="employee" id="employee" formControlName="employee" placeholder="Enter here" class="form-control">
             </div>
             <div class="form-group">
-                <p>Selected employee:</p>
+                <p>{{ "NewRequest.EmployeeSelected" | translate }}</p>
                 <div class="card">
                     <div class="card-body">
                         <h6>John Smith</h6>
@@ -38,31 +38,36 @@
             </div>
             <div class="form-group">
                 <!-- Employee Type -->
-                <label for="employeeType">Employee type:</label>
+                <label for="employeeType">{{ "NewRequest.EmployeeType" | translate }}</label>
                 <select name="employeeType" id="employeeType" formControlName="employeeType" class="form-control">
-                    <option value="" class="text-muted">Choose a type</option>
-                    <option *ngFor="let type of employeeTypes">{{ type }}</option>
+                    <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt1" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt2" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt3" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt4" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
+                    <option>{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <!-- Critical Hire Status -->
-                <label>Critical hire status</label>
+                <label>{{ "NewRequest.isCriticalLabel" | translate }}</label>
                 <div class="form-check">
                     <input type="radio" name="isCritical" id="isCriticalTrue" class="form-check-input" formControlName="isCritical" value="true">
-                    <label for="isCriticalTrue" class="form-check-label">Yes, this employee is a critical hire</label>
+                    <label for="isCriticalTrue" class="form-check-label">{{ "NewRequest.IsCriticalTrueLabel" | translate }}</label>
                 </div>
                 <div class="form-check">
                     <input type="radio" name="isCritical" id="isCriticalFalse" class="form-check-input" formControlName="isCritical" value="false">
-                    <label for="isCriticalFalse" class="form-check-label">No</label>
+                    <label for="isCriticalFalse" class="form-check-label">{{ "NewRequest.IsCriticalFalseLabel" | translate }}</label>
                 </div>
             </div>
             <div class="form-group">
                 <!-- Date of move -->
-                <label for="dateOfMove">Date of move</label>
+                <label for="dateOfMove">{{ "NewRequest.DateOfMoveLabel" | translate }}</label>
                 <input type="date" class="form-control" formControlName="dateOfMove">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Find a workspace</button>
+                <button type="submit" class="btn btn-primary">{{ "NewRequest.SubmitBtn" | translate }}</button>
             </div>
         </form>
     </div>

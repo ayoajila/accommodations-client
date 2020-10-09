@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 // TODO: Set up with translate
 // TODO: Set default date to current
@@ -12,31 +13,19 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class NewRequestComponent implements OnInit {
   requestForm: FormGroup;
-  requestTypes: string[];
-  employeeTypes: string[];
-  constructor(private fb: FormBuilder) { }
+  constructor(private _fb: FormBuilder, private _translate: TranslateService) { 
+  }
 
   ngOnInit(): void {
-    this.requestForm = this.fb.group({
+    this.requestForm = this._fb.group({
       requestType: [''],
       employee: [''],
       employeeType: [''],
       isCritical: ['false'],
       dateOfMove: [''],
     });
-    this.requestTypes = [
-      "Workplace for new hire",
-      "Move from a current workspace",
-      "Vacate a workspace"
-    ]
-    this.employeeTypes = [
-      "Student",
-      "Developer/Analyst",
-      "Team Leader",
-      "Manager",
-      "Director",
-      "Admin"
-    ]
+    this._translate.use('en');
+    console.log(this._translate.currentLang);
   }
 
   // handler for form submittal
