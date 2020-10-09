@@ -8,10 +8,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { httpLoaderFactory } from '../shared/factories/httpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
 import { SelectWorkspaceComponent } from './select-workspace/select-workspace.component';
+import { RequestDetailsComponent } from './request-details/request-details.component';
 
 
 @NgModule({
-  declarations: [NewRequestComponent, SelectWorkspaceComponent],
+  declarations: [NewRequestComponent, SelectWorkspaceComponent, RequestDetailsComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
