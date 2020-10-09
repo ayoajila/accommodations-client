@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 // TODO: Set default date to current
@@ -11,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NewRequestComponent implements OnInit {
   requestForm: FormGroup;
-  constructor(private fb: FormBuilder, private translate: TranslateService) {
+  constructor(private fb: FormBuilder, private translate: TranslateService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -38,6 +39,7 @@ export class NewRequestComponent implements OnInit {
       isCritical: 'false',
       dateOfMove: ''
     });
+    this.router.navigateByUrl('/selectWorkspace');
   }
 
   /**
