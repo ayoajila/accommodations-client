@@ -6,56 +6,6 @@
 
 // End Override Section //
 
-// Start Global Class Section //
-// Alternate containers linked with screen size
-@media (max-width: 576px) {
-    .container-small {
-        width: 300px;
-    }
-    .container-large {
-        width: 500px;
-    } 
-}
-@media (min-width: 576px) {
-    .container-small {
-        width: 400px;
-    }
-    .container-large {
-        width: 560px;
-    } 
-}
-@media (min-width: 768px) {
-    .container-small {
-        width: 600px;
-    }
-    .container-large {
-        width: 970px;
-    } 
-} 
-@media (min-width: 992px) {
-    .container-small {
-        width: 600px;
-    }
-    .container-large {
-        width: 1170px;
-    } 
-} 
-@media (min-width: 1200px) {
-    .container-small {
-        width: 700px;
-    }
-    .container-large {
-        width: 1500px;
-    } 
-}
-
-.container-small, .container-large {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-// End Global Class Section //
-
 // Imports for style files
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 
