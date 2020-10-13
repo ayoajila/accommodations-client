@@ -45,6 +45,16 @@
         "CancelRequest" : "Cancel Request",
         "FilterResultsLabel" : "Available workspaces",
         "SelectWorkspaceBtn" : "Reserve this space"
+    },
+    "RequestDetails" : {
+        "PageTitle" : "Request Details",
+        "BehalfOfLabel" : "Request Behalf Of:",
+        "EmailLabel" : "Email Address:",
+        "EmployeeTypeLabel" : "Employee Type:",
+        "IsCriticalLabel" : "Critical Hire:",
+        "MoveDateLabel" : "Move Date:",
+        "WorkspaceLabel" : "Workspace:",
+        "SubmitRequestBtn" : "Submit"
     }
     
 }

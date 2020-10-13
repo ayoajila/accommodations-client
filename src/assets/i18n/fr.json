@@ -45,5 +45,15 @@
         "CancelRequest" : "fr-Cancel Request",
         "FilterResultsLabel" : "fr-Available workspaces",
         "SelectWorkspaceBtn" : "fr-Reserve this space"
+    },
+    "RequestDetails" : {
+        "PageTitle" : "fr-Request Details",
+        "BehalfOfLabel" : "fr-Request Behalf Of:",
+        "EmailLabel" : "fr-Email Address:",
+        "EmployeeTypeLabel" : "fr-Employee Type:",
+        "IsCriticalLabel" : "fr-Critical Hire:",
+        "MoveDateLabel" : "fr-Move Date:",
+        "WorkspaceLabel" : "fr-Workspace:",
+        "SubmitRequestBtn" : "fr-Submit"
     }
 }
