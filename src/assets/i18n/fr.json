@@ -55,5 +55,10 @@
         "MoveDateLabel" : "fr-Move Date:",
         "WorkspaceLabel" : "fr-Workspace:",
         "SubmitRequestBtn" : "fr-Submit"
+    },
+    "RequestConfirmation" : {
+        "PageTitle" : "fr-Confirmation",
+        "ReferenceNumberLabel" : "fr-Your Reference Number:",
+        "NewRequest" : "fr-Make another request"
     }
 }

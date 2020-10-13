@@ -9,10 +9,11 @@ import { httpLoaderFactory } from '../shared/factories/httpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
 import { SelectWorkspaceComponent } from './select-workspace/select-workspace.component';
 import { RequestDetailsComponent } from './request-details/request-details.component';
+import { RequestConfirmationComponent } from './request-confirmation/request-confirmation.component';
 
 
 @NgModule({
-  declarations: [NewRequestComponent, SelectWorkspaceComponent, RequestDetailsComponent],
+  declarations: [NewRequestComponent, SelectWorkspaceComponent, RequestDetailsComponent, RequestConfirmationComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

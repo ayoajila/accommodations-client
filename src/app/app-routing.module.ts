@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { NewRequestComponent } from './request/new-request/new-request.component';
 import { RequestDetailsComponent } from './request/request-details/request-details.component';
 import { SelectWorkspaceComponent } from './request/select-workspace/select-workspace.component';
+import { RequestConfirmationComponent } from './request/request-confirmation/request-confirmation.component';
 
 const mainRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const mainRoutes: Routes = [
   {
     path: 'requestDetails',
     component: RequestDetailsComponent
+  },
+  {
+    path: 'requestConfirmation',
+    component: RequestConfirmationComponent
   }
 ];
 

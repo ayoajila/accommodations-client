@@ -55,6 +55,11 @@
         "MoveDateLabel" : "Move Date:",
         "WorkspaceLabel" : "Workspace:",
         "SubmitRequestBtn" : "Submit"
+    },
+    "RequestConfirmation" : {
+        "PageTitle" : "Confirmation",
+        "ReferenceNumberLabel" : "Your Reference Number:",
+        "NewRequest" : "Make another request"
     }
     
 }
