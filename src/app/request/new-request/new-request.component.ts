@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
-// TODO: Set default date to current
-
 @Component({
   selector: 'app-new-request',
   templateUrl: './new-request.component.html',
@@ -32,14 +30,15 @@ export class NewRequestComponent implements OnInit {
    */
   requestFormSubmit(): void {
     console.log(this.requestForm.value);
-    this.requestForm.reset({
-      requestType: '',
-      employee: '',
-      employeeType: '',
-      isCritical: 'false',
-      dateOfMove: ''
+    this.router.navigate(['/selectWorkspace'], { queryParams:
+      {
+        requestType: this.requestForm.get('requestType').value,
+        employee: this.requestForm.get('employee').value,
+        employeeType: this.requestForm.get('employeeType').value,
+        isCritical: this.requestForm.get('isCritical').value,
+        dateOfMove: this.requestForm.get('dateOfMove').value
+      }
     });
-    this.router.navigateByUrl('/selectWorkspace');
   }
 
   /**

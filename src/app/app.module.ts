@@ -9,7 +9,6 @@ import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
-import { ReplaceWithSpacePipe } from './shared/pipes/replace-with-space.pipe';
 
 
 
@@ -17,7 +16,6 @@ import { ReplaceWithSpacePipe } from './shared/pipes/replace-with-space.pipe';
   declarations: [
     AppComponent,
     LandingComponent,
-    ReplaceWithSpacePipe
   ],
   imports: [
     BrowserModule,
