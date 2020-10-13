@@ -20,24 +20,32 @@
                 <!-- Filter -->
                 <form [formGroup]="filterForm" (ngSubmit)="filterSearch()">
                     <!-- Workspace Type -->
-                    <div class="form-group">
-                        <label for="workspaceType">{{ "SelectWorkspace.WorkspaceTypeLabel" | translate }}</label>
-                        <select name="workspaceType" id="workspaceType" formControlName="workspaceType" class="form-control">
-                            <option value="all">{{ "SelectWorkspace.WorkspaceTypeOpt1" | translate }}</option>
-                            <option value="cubicle">{{ "SelectWorkspace.WorkspaceTypeOpt2" | translate }}</option>
-                            <option value="office">{{ "SelectWorkspace.WorkspaceTypeOpt3" | translate }}</option>
-                            <option value="shared office">{{ "SelectWorkspace.WorkspaceTypeOpt4" | translate }}</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="workspaceType">{{ "SelectWorkspace.WorkspaceTypeLabel" | translate }}</label>
+                                <select name="workspaceType" id="workspaceType" formControlName="workspaceType" class="form-control">
+                                    <option value="all">{{ "SelectWorkspace.WorkspaceTypeOpt1" | translate }}</option>
+                                    <option value="cubicle">{{ "SelectWorkspace.WorkspaceTypeOpt2" | translate }}</option>
+                                    <option value="office">{{ "SelectWorkspace.WorkspaceTypeOpt3" | translate }}</option>
+                                    <option value="shared office">{{ "SelectWorkspace.WorkspaceTypeOpt4" | translate }}</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <!-- Workspace Floor -->
-                    <div class="form-group">
-                        <label for="workspaceFloor">{{ "SelectWorkspace.WorkspaceFloorLabel" | translate }}</label>
-                        <select name="workspaceFloor" id="workspaceFloor" formControlName="workspaceFloor" class="form-control">
-                            <option value="all">All</option>
-                            <!-- will be a forEach when functional -->
-                            <option>1</option>
-                            <option>2</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label for="workspaceFloor">{{ "SelectWorkspace.WorkspaceFloorLabel" | translate }}</label>
+                                <select name="workspaceFloor" id="workspaceFloor" formControlName="workspaceFloor" class="form-control">
+                                    <option value="all">All</option>
+                                    <!-- will be a forEach when functional -->
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">{{ "SelectWorkspace.FilterBtn" | translate }}</button>
