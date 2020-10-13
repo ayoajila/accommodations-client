@@ -2,10 +2,29 @@
 
 // Start Override Section //
 // Example:
-// $primary: #fff540;
+$primary: #26374a;
 
 // End Override Section //
 
 // Imports for style files
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext");
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.4375;
+}
+
+h1 {
+    border-bottom: 1px solid #af3c43;
+    margin-bottom: .2em;
+    margin-top: 1em;
+    padding-bottom: .2em;
+}
+
+.heading {
+    font-family: Lato, sans-serif;
+}
 
