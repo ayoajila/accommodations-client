@@ -9,13 +9,15 @@ import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
+import { ReplaceWithSpacePipe } from './shared/pipes/replace-with-space.pipe';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    ReplaceWithSpacePipe
   ],
   imports: [
     BrowserModule,
