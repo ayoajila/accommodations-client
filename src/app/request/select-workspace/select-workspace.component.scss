@@ -1,0 +1,10 @@
+.filterResults {
+    margin: 0 auto 40px;
+    height: 380px;
+    overflow-y: scroll;
+}
+// hide the scrollbar
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}

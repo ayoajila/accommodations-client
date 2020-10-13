@@ -3,5 +3,63 @@
         "TITLE": "Test Area for ngx-translate",
         "BUTTON": "Francais",
         "MESSAGE": "It works!"
+    },
+    "NewRequest" : {
+        "ProjectTitle" : "Accommodations",
+        "PageTitle" : "Request Details",
+        "RequestTypeTitle" : "Select a request type below",
+        "RequestTypeDesc" : "You can make a request for a new hire, a request for an existing employee to move to a new workspace, and a request for an existing employee to vacate a workspace without requiring a new space.",
+        "RequestTypeLabel" : "Request Type",
+        "RequestTypeHint" : "Choose a type",
+        "RequestTypeOpt1" : "Workplace for new hire",
+        "RequestTypeOpt2" : "Move from a current workspace",
+        "RequestTypeOpt3" : "Vacate a workspace",
+        "EmployeeTitle" : "Select an employee",
+        "EmployeeHint" : "Enter here",
+        "EmployeeDesc" : "Select the employee who this request is for below.",
+        "EmployeeLabel" : "Find employee",
+        "EmployeeSelected" : "Selected employee:",
+        "EmployeeType" : "Employee type:",
+        "EmployeeTypeOpt1" : "Student",
+        "EmployeeTypeOpt2" : "Developer/Analyst",
+        "EmployeeTypeOpt3" : "Team Leader",
+        "EmployeeTypeOpt4" : "Manager",
+        "EmployeeTypeOpt5" : "Director",
+        "EmployeeTypeOpt6" : "Admin",
+        "IsCriticalLabel" : "Critical hire status:",
+        "IsCriticalTrueLabel" : "Yes, this employee is a critical hire",
+        "IsCriticalFalseLabel" : "No",
+        "DateOfMoveLabel" : "Date of move",
+        "SubmitBtn" : "Find a workspace"
+    },
+    "SelectWorkspace" : {
+        "PageTitle" : "Select Workspace",
+        "FilterTitle" : "Filter your search here",
+        "WorkspaceTypeLabel" : "Workspace type:",
+        "WorkspaceTypeOpt1" : "All",
+        "WorkspaceTypeOpt2" : "Cubicle",
+        "WorkspaceTypeOpt3" : "Office",
+        "WorkspaceTypeOpt4" : "Shared Office",
+        "WorkspaceFloorLabel" : "Select a floor:",
+        "FilterBtn" : "Filter search",
+        "CancelRequest" : "Cancel Request",
+        "FilterResultsLabel" : "Available workspaces",
+        "SelectWorkspaceBtn" : "Reserve this space"
+    },
+    "RequestDetails" : {
+        "PageTitle" : "Request Details",
+        "BehalfOfLabel" : "Request Behalf Of:",
+        "EmailLabel" : "Email Address:",
+        "EmployeeTypeLabel" : "Employee Type:",
+        "IsCriticalLabel" : "Critical Hire:",
+        "MoveDateLabel" : "Move Date:",
+        "WorkspaceLabel" : "Workspace:",
+        "SubmitRequestBtn" : "Submit"
+    },
+    "RequestConfirmation" : {
+        "PageTitle" : "Confirmation",
+        "ReferenceNumberLabel" : "Your Reference Number:",
+        "NewRequest" : "Make another request"
     }
+    
 }
