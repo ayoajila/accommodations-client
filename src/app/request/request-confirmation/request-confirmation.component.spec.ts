@@ -1,8 +1,8 @@
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
 
+import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
 import { RequestConfirmationComponent } from './request-confirmation.component';
 
 describe('RequestConfirmationComponent', () => {
