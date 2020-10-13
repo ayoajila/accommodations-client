@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RequestModule } from './request/request.module';
-
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
+import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
+import { RequestModule } from './request/request.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 
