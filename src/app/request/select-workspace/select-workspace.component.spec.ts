@@ -1,10 +1,9 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
 
+import { httpLoaderFactory } from 'src/app/shared/factories/httpLoaderFactory';
 import { SelectWorkspaceComponent } from './select-workspace.component';
 
 describe('SelectWorkspaceComponent', () => {
