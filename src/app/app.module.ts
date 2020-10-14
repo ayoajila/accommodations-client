@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { AppRoutingModule } from './app-routing.module';
 import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
-
+import { RequestModule } from './request/request.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -22,6 +22,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    RequestModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
