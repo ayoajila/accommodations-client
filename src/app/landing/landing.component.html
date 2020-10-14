@@ -1,3 +1,13 @@
+<div class="topnav">
+    <a class="active" href="#home">&#9734; Accommodations</a>
+    <div class="topnav-right">
+      <a href="#search">Home</a>
+      <a href="#about">Requests</a>
+      <a class="swapLanguage" (click)="swapLanguage()">{{ "TEST.BUTTON" | translate }}</a>
+      <a href="#about">Logout</a>
+    </div>
+  </div>
+
 <div class="container p-5">
     <h1 class="display-4">Landing Component</h1>
     <p class="lead">Calling the accommodations service below <a href="http://localhost:3000/accommodations/api/v1/index/greeting">here</a></p>

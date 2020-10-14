@@ -8,13 +8,15 @@ import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
