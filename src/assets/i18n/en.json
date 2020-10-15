@@ -9,7 +9,7 @@
         "PageTitle" : "Request Details",
         "RequestTypeTitle" : "Select a request type below:",
         "RequestTypeDesc" : "You can make a request for a new hire, a request for an existing employee to move to a new workspace, and a request for an existing employee to vacate a workspace without requiring a new space.",
-        "RequestTypeLabel" : "Request Type:",
+        "RequestTypeLabel" : "Request Type (Required):",
         "RequestTypeHint" : "Choose a type",
         "RequestTypeOpt1" : "Workplace for new hire",
         "RequestTypeOpt2" : "Move from a current workspace",
@@ -18,8 +18,8 @@
         "EmployeeHint" : "Enter here",
         "EmployeeDesc" : "Select the employee who this request is for below.",
         "EmployeeLabel" : "Find employee",
-        "EmployeeSelected" : "Selected employee:",
-        "EmployeeType" : "Employee type:",
+        "EmployeeSelected" : "Selected employee (Required):",
+        "EmployeeType" : "Employee type (Required):",
         "EmployeeTypeOpt1" : "Student",
         "EmployeeTypeOpt2" : "Developer/Analyst",
         "EmployeeTypeOpt3" : "Team Leader",
@@ -29,7 +29,7 @@
         "IsCriticalLabel" : "Critical hire status:",
         "IsCriticalTrueLabel" : "Yes, this employee is a critical hire",
         "IsCriticalFalseLabel" : "No",
-        "DateOfMoveLabel" : "Date of move:",
+        "DateOfMoveLabel" : "Date of move (Required):",
         "SubmitBtn" : "Find a workspace"
     },
     "SelectWorkspace" : {
