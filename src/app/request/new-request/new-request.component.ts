@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-new-request',
@@ -10,11 +9,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NewRequestComponent implements OnInit {
   requestForm: FormGroup;
-  constructor(private fb: FormBuilder, private translate: TranslateService, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.translate.use(this.translate.getBrowserLang());
     this.requestForm = this.fb.group({
       requestType: ['', Validators.required],
       // Should be a valid employee

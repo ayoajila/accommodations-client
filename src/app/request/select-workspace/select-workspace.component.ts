@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-select-workspace',
@@ -9,10 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SelectWorkspaceComponent implements OnInit {
   filterForm: FormGroup;
-  constructor(private fb: FormBuilder, private translate: TranslateService) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.translate.use(this.translate.getBrowserLang());
     this.filterForm = this.fb.group({
       workspaceType: ['all'],
       workspaceFloor: ['all']

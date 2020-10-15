@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-request-details',
@@ -8,11 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class RequestDetailsComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.translate.use(this.translate.getBrowserLang());
-  }
+  ngOnInit(): void { }
 
   submitRequest(): void{
 
