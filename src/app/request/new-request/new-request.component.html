@@ -1,4 +1,4 @@
-<div class="row justify-content-center pb-5">
+<div class="row justify-content-center pb-5 mx-0">
     <div class="col-sm-10 col-md-6">
         <div class="mt-5">
             <!-- Opener -->
@@ -12,7 +12,7 @@
                     <h3>{{ "NewRequest.RequestTypeTitle" | translate }}</h3>
                     <p>{{ "NewRequest.RequestTypeDesc" | translate }}</p>
                     <!-- Request Type -->
-                    <div class="form-group">
+                    <div class="form-group my-4">
                         <label for="requestType">{{ "NewRequest.RequestTypeLabel" | translate }}</label>
                         <select name="requestType" id="requestType" class="form-control form-control-lg" formControlName="requestType"
                         [attr.aria-invalid]="isFieldInValid('requestType')"
@@ -22,7 +22,7 @@
                             <option>{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
                             <option>{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">Required.</span>
+                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('requestType')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <!-- Employee Select -->
@@ -34,7 +34,7 @@
                         <input type="text" name="employee" id="employee" formControlName="employee" placeholder="{{ 'NewRequest.EmployeeHint' | translate }}" class="form-control form-control-lg"
                         [attr.aria-invalid]="isFieldInValid('employee')"
                         [ngClass]="{'is-valid': isFieldValid('employee'), 'is-invalid': isFieldInValid('employee')}">
-                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback" role="alert">Required.</span>
+                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('employee')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <!-- Selected Employee Information -->
@@ -61,7 +61,7 @@
                             <option>{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
                             <option>{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">Required.</span>
+                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('employeeType')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <div class="form-group mt-4">
@@ -81,10 +81,11 @@
                     <div class="form-group mt-4">
                         <!-- Date of move -->
                         <label for="dateOfMove">{{ "NewRequest.DateOfMoveLabel" | translate }}</label>
-                        <input type="date" placeholder="YYYY-MM-DD" class="form-control form-control-lg" formControlName="dateOfMove"
+                        <input type="text" placeholder="yyyy-mm-dd" class="form-control form-control-lg" formControlName="dateOfMove"
+                        onfocus="(this.type='date')" onblur="(this.type='text')"
                         [attr.aria-invalid]="isFieldInValid('dateOfMove')"
                         [ngClass]="{'is-valid': isFieldValid('dateOfMove'), 'is-invalid': isFieldInValid('dateOfMove')}">
-                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback" role="alert">Required.</span>
+                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('dateOfMove')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <div class="form-group">
