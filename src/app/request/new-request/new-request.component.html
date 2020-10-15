@@ -1,4 +1,4 @@
-<div class="row justify-content-center pb-5">
+<div class="row justify-content-center pb-5 mx-0">
     <div class="col-sm-10 col-md-6">
         <div class="mt-5">
             <!-- Opener -->
@@ -9,32 +9,36 @@
             <!-- Form -->
             <div class="mt-4">
                 <form [formGroup]="requestForm" (ngSubmit)="requestFormSubmit()">
-                    <h3 class="pb-2">{{ "NewRequest.RequestTypeTitle" | translate }}</h3>
+                    <h3>{{ "NewRequest.RequestTypeTitle" | translate }}</h3>
                     <p>{{ "NewRequest.RequestTypeDesc" | translate }}</p>
                     <!-- Request Type -->
-                    <div class="form-group">
+                    <div class="form-group my-4">
                         <label for="requestType">{{ "NewRequest.RequestTypeLabel" | translate }}</label>
                         <select name="requestType" id="requestType" class="form-control form-control-lg" formControlName="requestType"
+                        [attr.aria-invalid]="isFieldInValid('requestType')"
                         [ngClass]="{'is-valid': isFieldValid('requestType'), 'is-invalid': isFieldInValid('requestType')}">
                             <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
                             <option>{{ "NewRequest.RequestTypeOpt1" | translate }}</option>
                             <option>{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
                             <option>{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback">Required.</span>
+                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
+                        <span *ngIf="isFieldValid('requestType')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
-                    <h3 class="pb-2">{{ "NewRequest.EmployeeTitle" | translate }}</h3>
-                    <p>{{ "NewRequest.EmployeeDesc" | translate }}</p>
                     <!-- Employee Select -->
+                    <h3>{{ "NewRequest.EmployeeTitle" | translate }}</h3>
+                    <p>{{ "NewRequest.EmployeeDesc" | translate }}</p>
                     <!-- Will change when adding in Microsoft Graph API -->
-                    <div class="form-group">
-                        <label for="employee">{{ "NewRequest.EmployeeTitle" | translate }}</label>
+                    <div class="form-group mt-4">
+                        <label for="employee">{{ "NewRequest.EmployeeLabel" | translate }}</label>
                         <input type="text" name="employee" id="employee" formControlName="employee" placeholder="{{ 'NewRequest.EmployeeHint' | translate }}" class="form-control form-control-lg"
+                        [attr.aria-invalid]="isFieldInValid('employee')"
                         [ngClass]="{'is-valid': isFieldValid('employee'), 'is-invalid': isFieldInValid('employee')}">
-                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback">Required.</span>
+                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback" role="alert">Invalid: Required.</span>
+                        <span *ngIf="isFieldValid('employee')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <!-- Selected Employee Information -->
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <p>{{ "NewRequest.EmployeeSelected" | translate }}</p>
                         <div class="card">
                             <div class="card-body">
@@ -43,10 +47,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <!-- Employee Type -->
                         <label for="employeeType">{{ "NewRequest.EmployeeType" | translate }}</label>
                         <select name="employeeType" id="employeeType" formControlName="employeeType" class="form-control form-control-lg"
+                        [attr.aria-invalid]="isFieldInValid('employeeType')"
                         [ngClass]="{'is-valid': isFieldValid('employeeType'), 'is-invalid': isFieldInValid('employeeType')}">
                             <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
                             <option>{{ "NewRequest.EmployeeTypeOpt1" | translate }}</option>
@@ -56,29 +61,37 @@
                             <option>{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
                             <option>{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback">Required.</span>
+                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
+                        <span *ngIf="isFieldValid('employeeType')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <!-- Critical Hire Status -->
-                        <label>{{ "NewRequest.IsCriticalLabel" | translate }}</label>
-                        <div class="form-check">
-                            <input type="radio" name="isCritical" id="isCriticalTrue" class="form-check-input" formControlName="isCritical" value="true">
-                            <label for="isCriticalTrue" class="form-check-label">{{ "NewRequest.IsCriticalTrueLabel" | translate }}</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="isCritical" id="isCriticalFalse" class="form-check-input" formControlName="isCritical" value="false">
-                            <label for="isCriticalFalse" class="form-check-label">{{ "NewRequest.IsCriticalFalseLabel" | translate }}</label>
+                        <label for="isCriticalRadio">{{ "NewRequest.IsCriticalLabel" | translate }}</label>
+                        <div role="radiogroup" id="isCriticalRadio">
+                            <div class="form-check">
+                                <input type="radio" name="isCritical" id="isCriticalTrue" class="form-check-input" formControlName="isCritical" value="true">
+                                <label for="isCriticalTrue" class="form-check-label">{{ "NewRequest.IsCriticalTrueLabel" | translate }}</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="isCritical" id="isCriticalFalse" class="form-check-input" formControlName="isCritical" value="false" aria-checked="true">
+                                <label for="isCriticalFalse" class="form-check-label">{{ "NewRequest.IsCriticalFalseLabel" | translate }}</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <!-- Date of move -->
                         <label for="dateOfMove">{{ "NewRequest.DateOfMoveLabel" | translate }}</label>
-                        <input type="date" class="form-control form-control-lg" formControlName="dateOfMove"
+                        <input type="text" placeholder="yyyy-mm-dd" class="form-control form-control-lg" formControlName="dateOfMove"
+                        onfocus="(this.type='date')" onblur="(this.type='text')"
+                        [attr.aria-invalid]="isFieldInValid('dateOfMove')"
                         [ngClass]="{'is-valid': isFieldValid('dateOfMove'), 'is-invalid': isFieldInValid('dateOfMove')}">
-                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback">Required.</span>
+                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback" role="alert">Invalid: Required.</span>
+                        <span *ngIf="isFieldValid('dateOfMove')" class="valid-feedback" role="alert">Valid entry.</span>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!requestForm.valid">{{ "NewRequest.SubmitBtn" | translate }}</button>
+                        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!requestForm.valid"
+                        [attr.aria-label]="requestForm.valid ? 'Submit and choose a workspace' : 'Disabled until the form data is valid'"
+                        [title]="requestForm.valid ? 'Submit and choose a workspace' : 'Disabled until the form data is valid'">{{ "NewRequest.SubmitBtn" | translate }}</button>
                     </div>
                 </form>
             </div>

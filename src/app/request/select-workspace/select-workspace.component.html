@@ -1,4 +1,4 @@
-<div class="row justify-content-center pb-5">
+<div class="row justify-content-center pb-5 mx-0">
     <div class="col-sm-10 col-md-6">
         <div class="mt-5">
             <!-- Navigation -->
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg">{{ "SelectWorkspace.FilterBtn" | translate }}</button>
+                        <button type="submit" class="btn btn-primary btn-lg" title="Filter search with selected values">{{ "SelectWorkspace.FilterBtn" | translate }}</button>
                     </div>
                 </form>
                 <a routerLink="/newRequest"><u>{{ "SelectWorkspace.CancelRequest" | translate }}</u></a>
@@ -54,9 +54,10 @@
                     <p class="text-muted"># of search results</p>
                     <div name="filterResults" class="filterResults card">
                         <ul class="list-group list-group-flush">
+                            <!-- Li should be replaced with ngFor=data pulled from service -->
                             <li class="list-group-item">
                                 Example1 Floor
-                                <h3>Example1 Workspace Name</h3>
+                                <h3 class="text-muted">Example1 Workspace Name</h3>
                                 Example1 Workspace Type<br>
                                 Example1 Workspace Capacity<br>
                                 <a class="link" routerLink="/requestDetails"><u>{{ "SelectWorkspace.SelectWorkspaceBtn" | translate }}</u><span>
@@ -68,7 +69,7 @@
                             </li>
                             <li class="list-group-item">
                                 Example2 Floor
-                                <h3>Example2 Workspace Name</h3>
+                                <h3 class="text-muted">Example2 Workspace Name</h3>
                                 Example2 Workspace Type<br>
                                 Example2 Workspace Capacity<br>
                                 <a class="link" routerLink="/requestDetails"><u>{{ "SelectWorkspace.SelectWorkspaceBtn" | translate }}</u><span>
@@ -80,7 +81,7 @@
                             </li>
                             <li class="list-group-item">
                                 Example3 Floor
-                                <h3>Example3 Workspace Name</h3>
+                                <h3 class="text-muted">Example3 Workspace Name</h3>
                                 Example3 Workspace Type<br>
                                 Example3 Workspace Capacity<br>
                                 <a class="link" routerLink="/requestDetails"><u>{{ "SelectWorkspace.SelectWorkspaceBtn" | translate }}</u><span>
@@ -92,7 +93,7 @@
                             </li>
                             <li class="list-group-item">
                                 Example4 Floor
-                                <h3>Example4 Workspace Name</h3>
+                                <h3 class="text-muted">Example4 Workspace Name</h3>
                                 Example4 Workspace Type<br>
                                 Example4 Workspace Capacity<br>
                                 <a class="link" routerLink="/requestDetails"><u>{{ "SelectWorkspace.SelectWorkspaceBtn" | translate }}</u><span>
