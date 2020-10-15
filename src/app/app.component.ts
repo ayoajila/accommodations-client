@@ -12,6 +12,10 @@ export class AppComponent implements OnInit{
   constructor(private translate: TranslateService) {
   }
 
+  /**
+   * Sets the current translate language using first, what is stored locally from past visists
+   * and if not, then defaulting to the browser's language setting.
+   */
   ngOnInit(): void {
     this.translate.use(localStorage.getItem('localLang') || this.translate.getBrowserLang());
   }

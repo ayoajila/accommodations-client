@@ -15,6 +15,8 @@ export class NavBarComponent implements OnInit {
 
   /**
    * Triggered on button click, swaps language between english and french.
+   * Also saves the language to localStorage so that it persists between the browser
+   * sessions.
    */
   swapLanguage(): void {
     if (this.translate.currentLang === 'en') {

@@ -11,8 +11,9 @@ export class RequestDetailsComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  submitRequest(): void{
-
-  }
+  /**
+   * TODO: Send request to the backend service and retrieve reference number.
+   */
+  submitRequest(): void{ }
 
 }
