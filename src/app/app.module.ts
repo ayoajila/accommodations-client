@@ -9,6 +9,7 @@ import { RequestModule } from './request/request.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
 
 
 
@@ -16,7 +17,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   declarations: [
     AppComponent,
     LandingComponent,
-    NavBarComponent
+    NavBarComponent,
+    ManageRequestComponent
   ],
   imports: [
     BrowserModule,
