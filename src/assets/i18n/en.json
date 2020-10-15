@@ -17,7 +17,7 @@
         "EmployeeTitle" : "Select an employee:",
         "EmployeeHint" : "Enter here",
         "EmployeeDesc" : "Select the employee who this request is for below.",
-        "EmployeeLabel" : "Find employee",
+        "EmployeeLabel" : "Find an employee:",
         "EmployeeSelected" : "Selected employee (Required):",
         "EmployeeType" : "Employee type (Required):",
         "EmployeeTypeOpt1" : "Student",
