@@ -8,6 +8,8 @@ import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
 import { RequestModule } from './request/request.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
 
 
 
@@ -15,6 +17,8 @@ import { LandingComponent } from './landing/landing.component';
   declarations: [
     AppComponent,
     LandingComponent,
+    NavBarComponent,
+    ManageRequestComponent
   ],
   imports: [
     BrowserModule,
