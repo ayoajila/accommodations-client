@@ -48,7 +48,6 @@ export class NewRequestComponent implements OnInit {
    * Method to handle form submittal
    */
   requestFormSubmit(): void {
-    console.log(this.requestForm.value);
     this.router.navigate(['/selectWorkspace'], { queryParams:
       {
         requestType: this.requestForm.get('requestType').value,
