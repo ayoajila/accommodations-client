@@ -17,6 +17,13 @@ export class AppComponent implements OnInit{
    * and if not, then defaulting to the browser's language setting.
    */
   ngOnInit(): void {
-    this.translate.use(localStorage.getItem('localLang') || this.translate.getBrowserLang());
+    this.translate.use(localStorage.getItem('localLang') || (this.isSupported() ? this.translate.getBrowserLang() : 'en'));
+  }
+
+  /**
+   * Method used to determine if the browser's default language is supported
+   */
+  isSupported(): boolean {
+    return this.translate.getBrowserLang() === 'en' || this.translate.getBrowserLang() === 'fr';
   }
 }
