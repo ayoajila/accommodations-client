@@ -18,9 +18,9 @@
                         [attr.aria-invalid]="isFieldInValid('requestType')"
                         [ngClass]="{'is-valid': isFieldValid('requestType'), 'is-invalid': isFieldInValid('requestType')}">
                             <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
-                            <option>{{ "NewRequest.RequestTypeOpt1" | translate }}</option>
-                            <option>{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
-                            <option>{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
+                            <option value="Workspace for new hire">{{ "NewRequest.RequestTypeOpt1" | translate }}</option>
+                            <option value="Move from a current workspace">{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
+                            <option value="Vacate a workspace">{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                         </select>
                         <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('requestType')" class="valid-feedback" role="alert">Valid entry.</span>
@@ -54,12 +54,12 @@
                         [attr.aria-invalid]="isFieldInValid('employeeType')"
                         [ngClass]="{'is-valid': isFieldValid('employeeType'), 'is-invalid': isFieldInValid('employeeType')}">
                             <option value="" class="text-muted">{{ "NewRequest.RequestTypeHint" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt1" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt2" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt3" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt4" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
-                            <option>{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
+                            <option value="Student">{{ "NewRequest.EmployeeTypeOpt1" | translate }}</option>
+                            <option value="Developer/Analyst">{{ "NewRequest.EmployeeTypeOpt2" | translate }}</option>
+                            <option value="Team Leader">{{ "NewRequest.EmployeeTypeOpt3" | translate }}</option>
+                            <option value="Manager">{{ "NewRequest.EmployeeTypeOpt4" | translate }}</option>
+                            <option value="Director">{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
+                            <option value="Admin">{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                         </select>
                         <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
                         <span *ngIf="isFieldValid('employeeType')" class="valid-feedback" role="alert">Valid entry.</span>
