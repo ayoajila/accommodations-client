@@ -24,9 +24,4 @@ export class SelectWorkspaceComponent implements OnInit {
   filterSearch(): void {
     console.log(this.filterForm.value);
   }
-
-  goBack(): void {
-    this.router.navigate(['/newRequest'], { queryParamsHandling: 'preserve' });
-  }
-
 }
