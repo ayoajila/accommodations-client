@@ -1,15 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { httpLoaderFactory } from './shared/factories/httpLoaderFactory';
 import { RequestModule } from './request/request.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { SharedModule } from './shared/shared.module';
+
 
 
 
@@ -22,16 +21,9 @@ import { ManageRequestComponent } from './manage-request/manage-request.componen
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
     RequestModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GreetingService } from '../shared/services/greeting.service';
 import { TranslateService } from '@ngx-translate/core';
-import { catchError } from 'rxjs/operators';
-import { EMPTY } from 'rxjs';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,27 +9,22 @@ import { EMPTY } from 'rxjs';
 })
 export class NavBarComponent implements OnInit {
 
-  greeting$ = this.greetingService.getGreeting$.pipe(catchError(e => {
-    console.log(e) // TODO replace with error service
-    return EMPTY;
-  }))
+  constructor(private translate: TranslateService) { }
 
-  constructor(private greetingService: GreetingService, private _translate: TranslateService) { 
-    this._translate.setDefaultLang('en');
-    this._translate.use('en');
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   /**
    * Triggered on button click, swaps language between english and french.
+   * Also saves the language to localStorage so that it persists between the browser
+   * sessions.
    */
   swapLanguage(): void {
-    if (this._translate.currentLang === 'en') {
-      this._translate.use('fr');
+    if (this.translate.currentLang === 'en') {
+      this.translate.use('fr');
+      localStorage.setItem('localLang', 'fr');
     } else {
-      this._translate.use('en');
+      this.translate.use('en');
+      localStorage.setItem('localLang', 'en');
     }
   }
 

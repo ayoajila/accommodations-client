@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-request-confirmation',
@@ -8,10 +7,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class RequestConfirmationComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.translate.use(this.translate.getBrowserLang());
-  }
+  ngOnInit(): void { }
 
 }
