@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-request',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NewRequestComponent implements OnInit {
   requestForm: FormGroup;
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -21,13 +21,33 @@ export class NewRequestComponent implements OnInit {
       isCritical: ['false'],
       dateOfMove: ['', Validators.required],
     });
+    this.route.queryParams.subscribe(params => {
+      if (params.requestType !== undefined) {
+        this.requestForm.get('requestType').setValue(params.requestType);
+        this.requestForm.get('employee').setValue(params.employee);
+        this.requestForm.get('employeeType').setValue(params.employeeType);
+        this.requestForm.get('isCritical').setValue(params.isCritical);
+        this.requestForm.get('dateOfMove').setValue(params.dateOfMove);
+      } else {
+        this.resetForm();
+      }
+    });
+  }
+
+  resetForm(): void {
+    this.requestForm.reset({
+      requestType: '',
+      employee: '',
+      employeeType: '',
+      isCritical: 'false',
+      dateOfMove: ''
+    });
   }
 
   /**
    * Method to handle form submittal
    */
   requestFormSubmit(): void {
-    console.log(this.requestForm.value);
     this.router.navigate(['/selectWorkspace'], { queryParams:
       {
         requestType: this.requestForm.get('requestType').value,

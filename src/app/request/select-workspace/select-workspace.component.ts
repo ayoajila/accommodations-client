@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-select-workspace',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class SelectWorkspaceComponent implements OnInit {
   filterForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.filterForm = this.fb.group({
@@ -23,5 +24,4 @@ export class SelectWorkspaceComponent implements OnInit {
   filterSearch(): void {
     console.log(this.filterForm.value);
   }
-
 }
