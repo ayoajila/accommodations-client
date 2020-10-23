@@ -4,6 +4,11 @@
         "BUTTON": "English",
         "MESSAGE": "fr-It works!"
     },
+    "NAVBAR" : {
+        "HOME" : "fr-Home",
+        "REQUESTS" : "fr-Requests",
+        "LOGOUT" : "fr-Logout"
+    },
     "NewRequest" : {
         "ProjectTitle" : "fr-Accommodations",
         "PageTitle" : "fr-Request Details",
@@ -17,8 +22,8 @@
         "EmployeeTitle" : "fr-Select an employee:",
         "EmployeeHint" : "fr-Enter here",
         "EmployeeDesc" : "fr-Select the employee who this request is for below.",
-        "EmployeeLabel" : "fr-Find employee",
-        "EmployeeSelected" : "fr-Selected employee (Required):",
+        "EmployeeLabel" : "fr-Find employee (Required)",
+        "EmployeeSelected" : "fr-Selected employee:",
         "EmployeeType" : "fr-Employee type (Required):",
         "EmployeeTypeOpt1" : "fr-Student",
         "EmployeeTypeOpt2" : "fr-Developer/Analyst",
@@ -30,7 +35,9 @@
         "IsCriticalTrueLabel" : "fr-Yes, this employee is a critical hire",
         "IsCriticalFalseLabel" : "fr-No",
         "DateOfMoveLabel" : "fr-Date of move (Required):",
-        "SubmitBtn" : "fr-Find a workspace"
+        "SubmitBtn" : "fr-Find a workspace",
+        "ValidMsg" : "fr-Valid input.",
+        "InvalidMsg" : "fr-Invalid input: Field is required."
     },
     "SelectWorkspace" : {
         "PageTitle" : "fr-Select Workspace",

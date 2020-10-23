@@ -4,6 +4,11 @@
         "BUTTON": "Francais",
         "MESSAGE": "It works!"
     },
+    "NAVBAR" : {
+        "HOME" : "Home",
+        "REQUESTS" : "Requests",
+        "LOGOUT" : "Logout"
+    },
     "NewRequest" : {
         "ProjectTitle" : "Accommodations",
         "PageTitle" : "Request Details",
@@ -17,8 +22,8 @@
         "EmployeeTitle" : "Select an employee:",
         "EmployeeHint" : "Enter here",
         "EmployeeDesc" : "Select the employee who this request is for below.",
-        "EmployeeLabel" : "Find an employee:",
-        "EmployeeSelected" : "Selected employee (Required):",
+        "EmployeeLabel" : "Find an employee (Required):",
+        "EmployeeSelected" : "Selected employee:",
         "EmployeeType" : "Employee type (Required):",
         "EmployeeTypeOpt1" : "Student",
         "EmployeeTypeOpt2" : "Developer/Analyst",
@@ -30,7 +35,9 @@
         "IsCriticalTrueLabel" : "Yes, this employee is a critical hire",
         "IsCriticalFalseLabel" : "No",
         "DateOfMoveLabel" : "Date of move (Required):",
-        "SubmitBtn" : "Find a workspace"
+        "SubmitBtn" : "Find a workspace",
+        "ValidMsg" : "Valid input.",
+        "InvalidMsg" : "Invalid input: Field is required."
     },
     "SelectWorkspace" : {
         "PageTitle" : "Select Workspace",

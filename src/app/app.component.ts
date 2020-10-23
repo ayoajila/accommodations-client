@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   }
 
   /**
-   * Sets the current translate language using first, what is stored locally from past visists
+   * Sets the current translate language using first what is stored locally from past visists
    * and if not, then defaulting to the browser's language setting.
    */
   ngOnInit(): void {

@@ -22,8 +22,8 @@
                             <option value="Move from a current workspace">{{ "NewRequest.RequestTypeOpt2" | translate }}</option>
                             <option value="Vacate a workspace">{{ "NewRequest.RequestTypeOpt3" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
-                        <span *ngIf="isFieldValid('requestType')" class="valid-feedback" role="alert">Valid entry.</span>
+                        <span *ngIf="isFieldInValid('requestType')" class="invalid-feedback" role="alert">{{ "NewRequest.InvalidMsg" | translate }}</span>
+                        <span *ngIf="isFieldValid('requestType')" class="valid-feedback" role="alert">{{ "NewRequest.ValidMsg" | translate }}</span>
                     </div>
                     <!-- Employee Select -->
                     <h3>{{ "NewRequest.EmployeeTitle" | translate }}</h3>
@@ -34,8 +34,8 @@
                         <input type="text" name="employee" id="employee" formControlName="employee" placeholder="{{ 'NewRequest.EmployeeHint' | translate }}" class="form-control form-control-lg"
                         [attr.aria-invalid]="isFieldInValid('employee')"
                         [ngClass]="{'is-valid': isFieldValid('employee'), 'is-invalid': isFieldInValid('employee')}">
-                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback" role="alert">Invalid: Required.</span>
-                        <span *ngIf="isFieldValid('employee')" class="valid-feedback" role="alert">Valid entry.</span>
+                        <span *ngIf="isFieldInValid('employee')" class="invalid-feedback" role="alert">{{ "NewRequest.InvalidMsg" | translate }}</span>
+                        <span *ngIf="isFieldValid('employee')" class="valid-feedback" role="alert">{{ "NewRequest.ValidMsg" | translate }}</span>
                     </div>
                     <!-- Selected Employee Information -->
                     <div class="form-group mt-4">
@@ -61,8 +61,8 @@
                             <option value="Director">{{ "NewRequest.EmployeeTypeOpt5" | translate }}</option>
                             <option value="Admin">{{ "NewRequest.EmployeeTypeOpt6" | translate }}</option>
                         </select>
-                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">Invalid: Required.</span>
-                        <span *ngIf="isFieldValid('employeeType')" class="valid-feedback" role="alert">Valid entry.</span>
+                        <span *ngIf="isFieldInValid('employeeType')" class="invalid-feedback" role="alert">{{ "NewRequest.InvalidMsg" | translate }}</span>
+                        <span *ngIf="isFieldValid('employeeType')" class="valid-feedback" role="alert">{{ "NewRequest.ValidMsg" | translate }}</span>
                     </div>
                     <div class="form-group mt-4">
                         <!-- Critical Hire Status -->
@@ -85,8 +85,8 @@
                         onfocus="(this.type='date')" onblur="(this.type='text')"
                         [attr.aria-invalid]="isFieldInValid('dateOfMove')"
                         [ngClass]="{'is-valid': isFieldValid('dateOfMove'), 'is-invalid': isFieldInValid('dateOfMove')}">
-                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback" role="alert">Invalid: Required.</span>
-                        <span *ngIf="isFieldValid('dateOfMove')" class="valid-feedback" role="alert">Valid entry.</span>
+                        <span *ngIf="isFieldInValid('dateOfMove')" class="invalid-feedback" role="alert">{{ "NewRequest.InvalidMsg" | translate }}</span>
+                        <span *ngIf="isFieldValid('dateOfMove')" class="valid-feedback" role="alert">{{ "NewRequest.ValidMsg" | translate }}</span>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-lg" [disabled]="!requestForm.valid"
